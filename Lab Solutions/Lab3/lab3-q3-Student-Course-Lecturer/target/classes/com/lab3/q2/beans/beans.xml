@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	
+	
+	<bean id="lecturer" class="com.lab3.q2.Lecturer">
+		<constructor-arg name="firstName" value="Gerard"></constructor-arg>
+		<constructor-arg name="surname" value="Harrison"></constructor-arg>
+		<constructor-arg name="id" value="G0012345"></constructor-arg>
+	</bean>
+	<bean id="ssrad" class="com.lab3.q2.Course">
+		<constructor-arg name="courseID" value="SSRAD"></constructor-arg>
+		<constructor-arg name="courseName" value="Server Side RAD"></constructor-arg>
+		<constructor-arg name="lecturer" ref="lecturer"></constructor-arg>
+	</bean>
+	<bean id="john" class="com.lab3.q2.Student">
+		<constructor-arg name="firstName" value="John"></constructor-arg>
+		<constructor-arg name="surname" value="Smith"></constructor-arg>
+		<constructor-arg name="course" ref="ssrad"></constructor-arg>
+	</bean>
+	<bean id="patrick" class="com.lab3.q2.Student">
+		<constructor-arg name="firstName" value="Patrick"></constructor-arg>
+		<constructor-arg name="surname" value="O'Malley"></constructor-arg>
+		<constructor-arg name="course" ref="ssrad"></constructor-arg>
+	</bean>
+</beans>

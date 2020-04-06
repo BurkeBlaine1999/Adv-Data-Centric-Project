@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="person" class="com.lab3.q1.Person">
+		<constructor-arg name="firstName" value="Gerard"></constructor-arg>
+		<constructor-arg name="surname" value="Harrison"></constructor-arg>
+		<constructor-arg name="address" ref="address"></constructor-arg>
+	</bean>
+	<bean id="address" class="com.lab3.q1.Address">
+		<constructor-arg name="street" value="Bothar Mor"></constructor-arg>
+		<constructor-arg name="town" value="Galway"></constructor-arg>
+		<constructor-arg name="county" value="Co. Galway"></constructor-arg>
+	</bean>
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="c" class="com.lab4.Car">
+		<constructor-arg index="0" value="201-G-1"></constructor-arg>
+		<constructor-arg index="1" value="1.3"></constructor-arg>
+	</bean>
+
+	<bean id="car1" class="com.lab4.Car">
+		<constructor-arg index="0" value="2xxx-G-1"></constructor-arg>
+		<constructor-arg index="1" value="1.4"></constructor-arg>
+	</bean>
+	
+	<bean id="addr3" class="com.lab4.Address">
+		<constructor-arg value="High"></constructor-arg>
+		<constructor-arg value="Castlebar"></constructor-arg>
+		<constructor-arg value="Mayo"></constructor-arg>
+	</bean>	
+	
+	<bean id="person1" class="com.lab4.Person" autowire="constructor">
+		<constructor-arg value="John Smith"></constructor-arg>
+	</bean>
+</beans>
+
+
+
+
+
+
+

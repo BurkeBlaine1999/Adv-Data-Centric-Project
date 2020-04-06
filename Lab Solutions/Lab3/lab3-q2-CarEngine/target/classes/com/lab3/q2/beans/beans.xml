@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.lab3.q2.Car" id="2017-G-1">
+		<constructor-arg name="reg" value="2017-G-1"></constructor-arg>
+		<constructor-arg name="doors" value="5"></constructor-arg>
+		<constructor-arg name="colour" value="red"></constructor-arg>
+		<constructor-arg name="engine" ref="engine1.6"></constructor-arg>
+	</bean>
+	<bean id="2000-G-456" class="com.lab3.q2.Car">
+		<constructor-arg name="reg" value="2000-G-456"></constructor-arg>
+		<constructor-arg name="doors" value="4"></constructor-arg>
+		<constructor-arg name="colour" value="green"></constructor-arg>
+		<constructor-arg name="engine" ref="engine1.6"></constructor-arg>
+	</bean>
+	<bean id="2010-WH-77" class="com.lab3.q2.Car">
+		<constructor-arg name="reg" value="2010-WH-77"></constructor-arg>
+		<constructor-arg name="doors" value="5"></constructor-arg>
+		<constructor-arg name="colour" value="black"></constructor-arg>
+		<constructor-arg name="engine" ref="engine1.2"></constructor-arg>
+	</bean>
+	<bean id="engine1.2" class="com.lab3.q2.Engine">
+		<constructor-arg name="size" value="1.2"></constructor-arg>
+		<constructor-arg name="fuel" value="Petrol"></constructor-arg>
+	</bean>
+	<bean id="engine1.6" class="com.lab3.q2.Engine">
+		<constructor-arg name="size" value="1.6"></constructor-arg>
+		<constructor-arg name="fuel" value="Diesel"></constructor-arg>
+	</bean>
+</beans>
