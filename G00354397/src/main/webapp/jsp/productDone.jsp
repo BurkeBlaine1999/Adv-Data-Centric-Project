@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> Success! ${customer.cName} was added!</h1>
+	<h1> Success! ${product.pDesc} was added!</h1>
+	<h1> Success! ${product.qtyInStock} was added!</h1>
 	<a href="/index.html">Return home</a>
 </body>
 </html>

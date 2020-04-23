@@ -9,11 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form modelAttribute="customer">
+	<form:form modelAttribute="product">
 	  <table>
 	    <tr>
 	      <td>Name:</td>
-	      <td><form:input path="cName"></form:input></td>
+	      <td><form:input path="pDesc"></form:input></td>
+	      <td><form:input path="qtyInStock"></form:input></td>
 	    </tr>
 	    <tr>
 	      <td colspan="2">
