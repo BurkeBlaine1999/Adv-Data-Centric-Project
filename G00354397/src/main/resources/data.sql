@@ -1,3 +1,4 @@
+Use Sales;
 insert into customers values (1, "John");
 insert into customers values (2, "Tom");
 insert into customers values (3, "Fred");
