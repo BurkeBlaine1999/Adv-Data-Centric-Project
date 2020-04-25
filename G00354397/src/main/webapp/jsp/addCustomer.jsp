@@ -6,13 +6,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add New Customer</title>
 </head>
 <body>
+<h1>Add New Customer</h1>
 	<form:form modelAttribute="customer">
 	  <table>
 	    <tr>
-	      <td>Name:</td>
+	      <td>Customer Name:</td>
 	      <td><form:input path="cName"></form:input></td>
 	    </tr>
 	    <tr>

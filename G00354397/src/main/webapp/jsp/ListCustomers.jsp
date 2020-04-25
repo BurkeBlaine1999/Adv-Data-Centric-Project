@@ -28,19 +28,29 @@ table#t01 {
 </head>
 <body>
 <h2>List of Customers</h2>
+
+
+<c:forEach items="${customers}" var="customer">
+<h3>${customer.cName}</h3>
 	<table id="t01">
 	<tr>
-		<th>Customer ID</th>
-		<th>Customer Name</th>
+		<th>Order ID</th>
+		<th>Order Quantity</th>
+		<th>Order Date</th>
+		<th>Description</th>
 	</tr>
-		<c:forEach items="${customers}" var="customer">
+		<c:forEach items="${customer.orders}" var="order">
 						<tr>
-							<td>${customer.cId}</td>
-							<td>${customer.cName}</td>
+							<td>${order.oId}</td>
+							<td>${order.qty}</td>
+							<td>${order.orderDate}</td>
+							<td>${order.prod.pDesc}</td>
 						</tr>
 		</c:forEach>
 	</table>
-	
-	<a href="/addOrder.html">Add Orders</a>
+</c:forEach>
+
+
+	<a href="/index.html">Return</a>
 </body>
 </html>

@@ -33,10 +33,10 @@ public class ProductController {
 	  
 	  ps.save(p);
 	  
-    return "redirect:productAdded.html";
+    return "redirect:ListProducts.html";
   }
   
-  @RequestMapping(value = "/productAdded.html", method=RequestMethod.GET)
+  @RequestMapping(value = "/ListProducts.html", method=RequestMethod.GET)
   public String orderAddedGET(Model m) {
 	  
 	  ArrayList<Product> products = ps.getAllProducts();

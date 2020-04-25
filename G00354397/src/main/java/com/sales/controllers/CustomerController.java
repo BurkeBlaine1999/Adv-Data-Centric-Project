@@ -35,11 +35,11 @@ public class CustomerController {
 	  
 	  cs.saveCourse(c);
 	  
-    return "redirect:customerAdded.html";
+    return "redirect:ListCustomers.html";
   }
   
   
-  @RequestMapping(value = "/customerAdded.html", method=RequestMethod.GET)
+  @RequestMapping(value = "/ListCustomers.html", method=RequestMethod.GET)
   public String orderAddedGET(Model m) {
 	  
 	  ArrayList<Customer> customers = cs.getAll();
