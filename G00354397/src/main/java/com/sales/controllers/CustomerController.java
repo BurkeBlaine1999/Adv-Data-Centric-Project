@@ -1,5 +1,7 @@
 package com.sales.controllers;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.sales.models.Customer;
+import com.sales.models.Order;
 import com.sales.services.CustomerService;
 
 @Controller
@@ -26,6 +29,7 @@ public class CustomerController {
     return "addCustomer";
   }
   
+  
   @RequestMapping(value = "/addCustomer.html", method=RequestMethod.POST)
   public String addCustomerPOST(@ModelAttribute("customer") Customer c ) {
 	  
@@ -34,9 +38,14 @@ public class CustomerController {
     return "redirect:customerAdded.html";
   }
   
+  
   @RequestMapping(value = "/customerAdded.html", method=RequestMethod.GET)
-  public String customerAddedGET(@ModelAttribute("customer") Customer c ) {
+  public String orderAddedGET(Model m) {
 	  
-    return "customerDone";
+	  ArrayList<Customer> customers = cs.getAll();
+	  m.addAttribute("customers",customers);
+	  
+    return "ListCustomers";
   }
+  
 }

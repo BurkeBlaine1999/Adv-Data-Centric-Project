@@ -1,4 +1,6 @@
 package com.sales.controllers;
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-
+import com.sales.models.Customer;
 import com.sales.models.Product;
 import com.sales.services.ProductService;
 
@@ -29,14 +31,17 @@ public class ProductController {
   @RequestMapping(value = "/addProduct.html", method=RequestMethod.POST)
   public String addProductPOST(@ModelAttribute("product") Product p ) {
 	  
-	  ps.saveCourse(p);
+	  ps.save(p);
 	  
     return "redirect:productAdded.html";
   }
   
   @RequestMapping(value = "/productAdded.html", method=RequestMethod.GET)
-  public String productAddedGET(@ModelAttribute("product") Product p ) {
+  public String orderAddedGET(Model m) {
 	  
-    return "productDone";
+	  ArrayList<Product> products = ps.getAllProducts();
+	  m.addAttribute("products",products);
+	  
+    return "ListProducts";
   }
 }
