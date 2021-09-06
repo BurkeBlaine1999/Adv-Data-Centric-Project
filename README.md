@@ -1,7 +1,5 @@
 # Advanced Data Centric
 
-Turn a regular expression into an NON-deterministic finite automaton (NFA)
-
 ### Prerequisites
 
 * [maven](https://maven.apache.org/) - Language Used
